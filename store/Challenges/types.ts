@@ -1,36 +1,37 @@
+
 import { MutationTree } from 'vuex';
 
 export interface XP {
-  current: number;
-  start: number;
-  end: number;
+	current: number;
+	start: number;
+	end: number;
 }
 
 export interface Challenge {
-  type: string;
-  description: string;
-  amount: number;
+	type: string;
+	description: string;
+	amount: number;
 }
 
 export interface Cookie {
-  level: number;
-  xp: XP;
-  completedChallenges: number;
+	level: number;
+	xp: XP;
+	completedChallenges: number;
 }
 
 export interface State {
-  level: number;
-  xp: XP;
-  completedChallenges: number;
-  currentChallengeIndex: number | null;
-  isLevelUpModalOpen: boolean;
-  allChallenges: Challenge[];
+	level: number;
+	xp: XP;
+	completedChallenges: number;
+	currentChallengeIndex: number | null;
+	isLevelUpModalOpen: boolean;
+	allChallenges: Challenge[];
 }
 
 export interface Getters {
-  challenfesLength: (state: State) => number;
-  currentXpPercentage: (state: State) => number;
-  currentChallenge: (state: State) => Challenge | null;
+	challengesLength: (state: State) => number;
+	currentXpPercentage: (state: State) => number;
+	currentChallenge: (state: State) => Challenge | null;
 }
 
 export enum Mutations {
